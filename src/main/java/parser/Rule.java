@@ -1,10 +1,7 @@
 package parser;
 
-import Log.Log;
 import scanner.token.Token;
-import scanner.type.Type;
 
-import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
 
 /**
@@ -31,8 +28,8 @@ public class Rule {
 //        }
         RHS = new ArrayList<GrammarSymbol>();
         if (splited.length > 1) {
-            String[] RHSs = splited[1].split(" ");
-            for (String s : RHSs){
+            String[] splitted = splited[1].split(" ");
+            for (String s : splitted){
                 try {
                     RHS.add(new GrammarSymbol(NonTerminal.valueOf(s)));
                 } catch (Exception e) {
